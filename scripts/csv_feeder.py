@@ -7,7 +7,7 @@ from report.models import StoreStatus, StoreTimezone, BusinessHour
 
 
 def feed_csvs_in_database():
-    with open('csvs/Menu hours.csv') as file:
+    with open('/home/harshit/Downloads/Menu hours.csv') as file:
         reader = csv.reader(file)
         next(reader)
 
@@ -25,7 +25,7 @@ def feed_timezone_csv():
 
 
 async def feed_store_staus_csv():
-    with open('csvs/store status.csv') as file:
+    with open('/home/harshit/Downloads/store status.csv') as file:
         reader = csv.reader(file)
         next(reader)
         object_to_feed = []
@@ -76,7 +76,7 @@ async def feed_store_staus_csv():
 
 
 def feed_timezone_csvs_in_database():
-    with open('csvs/timezone_data.csv') as file:
+    with open('/home/harshit/Downloads/timezone_data.csv') as file:
         reader = csv.reader(file)
         next(reader)
 
@@ -90,3 +90,9 @@ def feed_timezone_csvs_in_database():
 
 
 # feed_timezone_csvs_in_database()
+# feed_csvs_in_database()
+
+
+co = feed_store_staus_csv()
+
+asyncio.run(co)
